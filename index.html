@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon" />
+    <title>Treking kareri lake</title>
+    <!-- Popper.js first, then CoreUI JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.5.0/perfect-scrollbar.min.js"></script>
+    <!-- <script src="https://unpkg.com/@popperjs/core@2"></script> -->
+    <script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css" crossorigin="anonymous" /> -->
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/all.min.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+</head>
+
+<body>
+    <div class="c-app">
+        <div class="c-sidebar c-sidebar-dark c-sidebar-fixed c-sidebar-md-show" id="sidebar">
+            <div class="c-sidebar-brand d-md-down-none">
+                <img class="profile img-responsive c-img" src="profile.jpg" />
+            </div>
+            <ul class="c-sidebar-nav ps">
+                <!-- Sidebar Navigator -->
+                <li class="c-sidebar-nav-item">
+                    <a href="#" class="c-sidebar-nav-link" onclick="updateInnerBox('profile')">
+                        <i class="c-sidebar-nav-icon fa fa-user-o"></i> Home
+                    </a>
+                </li>
+                <!-- container for treks dropdown -->
+                <li class="c-sidebar-nav-dropdown">
+                    <a href="#" class="c-sidebar-nav-dropdown-toggle">
+                        <i class="c-sidebar-nav-icon fa fa-address-book"></i> Trek With Us
+                    </a>
+                    <ul class="c-sidebar-nav-dropdown-items">
+                        <!-- All Trek Should Go Here in <li> </li> -->
+                        <li class="c-sidebar-nav-item">
+                            <a href="#" class="c-sidebar-nav-link" onclick="updateInnerBox('adsxenium')">
+                                <i class="c-sidebar-nav-icon fa fa-history" aria-hidden="true"></i> Trek 1
+                            </a>
+                        </li>
+                        <li class="c-sidebar-nav-item">
+                            <a href="#" class="c-sidebar-nav-link" onclick="updateInnerBox('credence')">
+                                <i class="c-sidebar-nav-icon fa fa-history" aria-hidden="true"></i> Trek 2
+                            </a>
+                        </li>
+                        <li class="c-sidebar-nav-item">
+                            <a href="#" class="c-sidebar-nav-link" onclick="updateInnerBox('silhoutte')">
+                                <i class="c-sidebar-nav-icon fa fa-history" aria-hidden="true"></i> Trek 3
+                            </a>
+                        </li>
+                        <li class="c-sidebar-nav-item">
+                            <a href="#" class="c-sidebar-nav-link" onclick="updateInnerBox('iAdept')">
+                                <i class="c-sidebar-nav-icon fa fa-history" aria-hidden="true"></i> Trek 4
+                            </a>
+                        </li>
+                        <li class="c-sidebar-nav-item">
+                            <a href="#" class="c-sidebar-nav-link" onclick="updateInnerBox('jabong')">
+                                <i class="c-sidebar-nav-icon fa fa-history" aria-hidden="true"></i> Trek 5
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Accomodations container -->
+                <li class="c-sidebar-nav-dropdown">
+                    <a href="#" class="c-sidebar-nav-dropdown-toggle">
+                        <i class="c-sidebar-nav-icon fa fa-book"></i> Accomodations
+                    </a>
+                    <ul class="c-sidebar-nav-dropdown-items">
+                        <li class="c-sidebar-nav-item">
+                            <a href="#" class="c-sidebar-nav-link" onclick="updateInnerBox('todo')">
+                                <i class="c-sidebar-nav-icon fa fa-pencil"></i> Accomodation 1
+                            </a>
+                        </li>
+                        <li class="c-sidebar-nav-item">
+                            <a href="#" class="c-sidebar-nav-link" onclick="updateInnerBox('dept')">
+                                <i class="c-sidebar-nav-icon fa fa-spinner fa-pulse fa-fw" aria-hidden="true"></i> Accomodation 2
+                            </a>
+                        </li>
+                        <li class="c-sidebar-nav-item">
+                            <a href="#" class="c-sidebar-nav-link" onclick="updateInnerBox('quiz')">
+                                <i class="c-sidebar-nav-icon fa fa-users" aria-hidden="true"></i> Accomodation 3
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Gallery Container -->
+                <li class="c-sidebar-nav-item">
+                    <a href="#" class="c-sidebar-nav-link" onclick="updateInnerBox('skills')">
+                        <i class="c-sidebar-nav-icon fa fa-cog"></i> Gallery
+                    </a>
+                </li>
+                <!-- Reviews by our trekers -->
+                <li class="c-sidebar-nav-item">
+                    <a href="#" class="c-sidebar-nav-link" onclick="updateInnerBox('education')">
+                        <i class="c-sidebar-nav-icon fa fa-university"></i> Reviews by our trekers
+                    </a>
+                </li>
+                <!-- connect with us -->
+                <li class="c-sidebar-nav-item">
+                    <a href="#" class="c-sidebar-nav-link" onclick="updateInnerBox('profile')">
+                        <i class="c-sidebar-nav-icon fa fa-link"></i> Connect With Us
+                    </a>
+                </li>
+            </ul>
+            <button class="c-sidebar-minimizer c-class-toggler" type="button" data-target="_parent" data-class="c-sidebar-md-show"></button>
+        </div>
+        <div class="c-wrapper">
+            <header class="c-header c-header-light c-header-fixed">
+                <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar" data-class="c-sidebar-show" onclick="dat()">
+            <i class="c-header-nav-icon fa fa-bars"></i>
+          </button>
+                <button class="c-header-toggler c-class-toggler mfs-3 d-md-down-none" type="button" data-target="#sidebar" data-class="c-sidebar-md-show" responsive="true">
+            <i class="c-header-nav-icon fa fa-bars"></i>
+          </button>
+                <div class="c-header-nav nav dropdown" style="position: absolute; right: 7%">
+                    <a href="#" class="c-header-nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <strong>Kareri Trek &nbsp;</strong>
+                        <div class="c-avatar">
+                            <img src="profile_avtar.jpg" alt="avatar" class="c-avatar-img" />
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right pt-0 responsiv">
+                        <div class="dropdown-header bg-dark pt-2" style="color: #ffffff">
+                            <strong>About Us</strong>
+                        </div>
+                        <li class="dropdown-item">
+                            <span class="c-icon fa fa-user"></span>
+                            <strong> &nbsp; &nbsp;Kareri Trek </strong>
+                        </li>
+                        <li class="dropdown-item">
+                            <span class="c-icon fa fa-mobile"></span>
+                            <strong> &nbsp; &nbsp; +917807491792 </strong>
+                        </li>
+                        <a class="dropdown-item" href="mailto:rohit.mca17.du@gmail.com">
+                            <span class="c-icon fa fa-envelope"></span>
+                            <strong> &nbsp; &nbsp; mail@gmail.com</strong>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <div class="c-body">
+                <main class="c-main">
+                    <div class="container-fluid">
+                        <div class="fade-in" id="theme"></div>
+                    </div>
+                </main>
+            </div>
+            <footer class="c-footer c-footer-fixed">
+                <div style="display: flex">
+                    <label class="c-header-nav-item c-switch c-switch-3d c-switch-secondary">
+              <input type="checkbox" class="c-switch-input" checked="" />
+              <span class="c-switch-slider" onclick="changeTheme()"></span>
+            </label>
+                    <h5 class="c-header-nav=tiem" style="margin-left: 10px">
+                        Change Theme
+                    </h5>
+                </div>
+                <div style="position: absolute; right: 10%">
+                    <a href="https://github.com/rnayak1" style="color: inherit">
+                        <strong>made with &hearts; by me </strong>
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+<style>
+    .profile {
+        max-height: 70%;
+    }
+    
+    .dark {
+        background-color: #636f83;
+        color: #ffffff;
+        justify-content: center;
+    }
+    
+    .fade-in {
+        animation-duration: 3s;
+    }
+</style>
+<script>
+    const changeTheme = () => {
+        if (document.body.classList.contains("c-dark-theme"))
+            document.body.classList.remove("c-dark-theme");
+        else document.body.classList.add("c-dark-theme");
+    };
+    // window.onload = function() {
+    //     console.log("hello");
+    //     document.getElementsByTagName("body")[0].innerHTML =
+    //         '<object type="text/html" data="pages/demo.html" ></object>';
+    // };
+</script>
+
+</html>
