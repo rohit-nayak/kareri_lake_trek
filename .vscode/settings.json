@@ -1,0 +1,7 @@
+{
+  "prettier.useTabs": true,
+  "html.format.indentInnerHtml": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "prettier.trailingComma": "none"
+}
