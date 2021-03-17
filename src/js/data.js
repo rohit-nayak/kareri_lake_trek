@@ -1,4 +1,4 @@
-const treks = ['kareri_delhi', 'kareri_kareri', 'dhauladhar_trek'];
+const treks = ['kareri_delhi', 'kareri_kareri', 'dhauladhar_trek', 'manali_trek'];
 
 const getData = function() {
     fetch("../../pages/home.html")
@@ -11,7 +11,7 @@ const getData = function() {
 
 document.addEventListener("DOMContentLoaded", () => getData(), false);
 const getTrekDetails = (trekName) => {
-    fetch(`../../pages/${trekName}.html`)
+    fetch(`/pages/${trekName}.html`)
         .then(response => response.text())
         .then(response => {
             var modal = document.createElement("li");
