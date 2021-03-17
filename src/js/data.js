@@ -1,7 +1,7 @@
 const treks = ['kareri_delhi', 'kareri_kareri', 'dhauladhar_trek', 'manali_trek'];
 
 const getData = function() {
-    fetch("../../pages/home.html")
+    fetch("/kareri_lake_trek/pages/home.html")
         .then((response) => response.text())
         .then((response) => {
             document.getElementById("theme").innerHTML = response;
