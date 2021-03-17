@@ -11,7 +11,7 @@ const getData = function() {
 
 document.addEventListener("DOMContentLoaded", () => getData(), false);
 const getTrekDetails = (trekName) => {
-    fetch(`/pages/${trekName}.html`)
+    fetch(`/kareri_lake_trek/pages/${trekName}.html`)
         .then(response => response.text())
         .then(response => {
             var modal = document.createElement("li");
