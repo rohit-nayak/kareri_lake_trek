@@ -1,7 +1,7 @@
 const treks = ['kareri_delhi', 'kareri_kareri', 'dhauladhar_trek', 'manali_trek'];
 
 const getData = function() {
-    fetch("/kareri_lake_trek/pages/home.html")
+    fetch("./../../pages/home.html")
         .then((response) => response.text())
         .then((response) => {
             document.getElementById("theme").innerHTML = response;
@@ -11,7 +11,7 @@ const getData = function() {
 
 document.addEventListener("DOMContentLoaded", () => getData(), false);
 const getTrekDetails = (trekName) => {
-    fetch(`/kareri_lake_trek/pages/${trekName}.html`)
+    fetch(`./../../pages/${trekName}.html`)
         .then(response => response.text())
         .then(response => {
             var modal = document.createElement("li");
